@@ -10,12 +10,14 @@ class Muzakki_model
     $this->db = new Database;
   }
 
+  // * mengambil semua data muzakki
   public function getAllMuzakki()
   {
     $this->db->query("SELECT * FROM $this->table");
     return $this->db->resultSet();
   }
 
+  // * mengambil data muzakki berdasarkan id
   public function getMuzakkiById($id)
   {
     $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_muzakki = :id_muzakki');
@@ -23,6 +25,7 @@ class Muzakki_model
     return $this->db->single();
   }
 
+  // * menambahkan data muzakki
   public function postDataMuzakki($data)
   {
     $query = "INSERT INTO $this->table VALUES ('', :nama_muzakki, :jumlah_tanggungan, :keterangan)";
@@ -37,6 +40,7 @@ class Muzakki_model
     return $this->db->rowCount();
   }
 
+  // * mengupdate data muzakki
   public function updateDataMuzakki($data, $id)
   {
     $query = "UPDATE $this->table SET nama_muzakki = :nama_muzakki, jumlah_tanggungan = :jumlah_tanggungan, keterangan = :keterangan WHERE id_muzakki = :id_muzakki";
@@ -52,6 +56,7 @@ class Muzakki_model
     return $this->db->rowCount();
   }
 
+  // * menghapus data muzakki
   public function deleteDataMuzakki($id)
   {
     $query = "DELETE FROM $this->table WHERE id_muzakki = :id_muzakki";

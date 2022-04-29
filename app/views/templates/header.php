@@ -40,18 +40,18 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item <?php if ($data['link'] == 'home') echo 'active' ?>">
         <a class="nav-link" href="<?= BASEURL; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item <?php if ($data['link'] == 'muzakki') echo 'active' ?>">
         <a class="nav-link" href="<?= BASEURL; ?>/muzakki">
           <i class="fas fa-user"></i>
           <span>Muzakki</span></a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="<?= BASEURL; ?>">
+      <li class="nav-item <?php if ($data['link'] == 'kategori') echo 'active' ?>">
+        <a class="nav-link" href="<?= BASEURL; ?>/kategori">
           <i class="fas fa-th-large"></i>
           <span>Kategori</span></a>
       </li>
@@ -135,10 +135,10 @@
                   Settings
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <button class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
-                </a>
+                </button>
               </div>
             </li>
 

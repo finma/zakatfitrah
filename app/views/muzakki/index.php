@@ -39,6 +39,7 @@
                 <td><?= $muzakki['jumlah_tanggungan'] ?></td>
                 <td><?= $muzakki['keterangan'] ?></td>
                 <td>
+                  <a href="<?= BASEURL ?>/muzakki/detail/<?= $muzakki['id_muzakki'] ?>" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fas fa-eye"></i> Detail</a>
                   <a href="<?= BASEURL ?>/muzakki/edit/<?= $muzakki['id_muzakki'] ?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-edit"></i> Edit</a>
                   <a onclick="return confirm('Apakah yakin data akan dihapus?')" href="<?= BASEURL ?>/muzakki/delete/<?= $muzakki['id_muzakki'] ?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash"></i> Hapus</a>
                 </td>

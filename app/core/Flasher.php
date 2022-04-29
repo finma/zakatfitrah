@@ -3,9 +3,10 @@
 class Flasher
 {
 
-  public static function setFlash($message, $action, $type)
+  public static function setFlash($category, $message, $action, $type)
   {
     $_SESSION['flash'] = [
+      'category' => $category,
       'message' => $message,
       'action' => $action,
       'type' => $type,
@@ -16,7 +17,7 @@ class Flasher
   {
     if (isset($_SESSION['flash'])) {
       echo '<div class="alert alert-' . $_SESSION['flash']['type'] . ' alert-dismissible fade show" role="alert">
-              Data Muzakki <strong>' . $_SESSION['flash']['message'] . '</strong> ' . $_SESSION['flash']['action'] . '
+              Data ' . $_SESSION['flash']['category'] . ' <strong>' . $_SESSION['flash']['message'] . '</strong> ' . $_SESSION['flash']['action'] . '
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
