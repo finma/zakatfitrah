@@ -55,6 +55,11 @@
           <i class="fas fa-th-large"></i>
           <span>Kategori</span></a>
       </li>
+      <li class="nav-item <?php if ($data['link'] == 'pengumpulanzakatfitrah') echo 'active' ?>">
+        <a class="nav-link" href="<?= BASEURL; ?>/pengumpulanzakatfitrah">
+          <i class="fas fa-th-large"></i>
+          <span>Pengumpulan Zakat Fitrah</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
