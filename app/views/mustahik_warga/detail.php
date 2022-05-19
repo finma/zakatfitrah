@@ -3,7 +3,7 @@
 
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4 w-50">
-    <h1 class="h3 mb-0 text-gray-800">Tambah Data Mustahik Warga</h1>
+    <h1 class="h3 mb-0 text-gray-800">Detail Data Mustahik Warga</h1>
   </div>
 
   <div class='row w-50'>
