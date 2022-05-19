@@ -29,7 +29,13 @@
 
       <div class="col-lg-5">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="row mt-3">
+          <div class="col-lg-12">
+            <?php Flasher::flash(); ?>
+          </div>
+        </div>
+
+        <div class="card o-hidden border-0 shadow-lg my-2">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">

@@ -22,11 +22,18 @@ class Auth extends Controller
   // * method login
   public function signin()
   {
-    if ($_POST['username'] == 'finma' && $_POST['password'] == 'finma') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $data['login'] = $this->model('Auth_model')->getUser($username);
+
+    if ($password == $data['login']['password']) {
       $_SESSION['login'] = true;
+      $_SESSION['user'] = $data['login'];
       header('Location: ' . BASEURL . '/');
       exit;
     } else {
+      Flasher::setFlash('User', 'gagal', 'login', 'danger');
       header('Location: ' . BASEURL . '/auth/login');
       exit;
     }
