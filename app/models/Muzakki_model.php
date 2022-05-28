@@ -25,6 +25,12 @@ class Muzakki_model
     return $this->db->single();
   }
 
+  public function getSumJumlahTanggungan()
+  {
+    $this->db->query('SELECT SUM(jumlah_tanggungan) AS total_jiwa FROM ' . $this->table);
+    return $this->db->resultSet();
+  }
+
   // * menambahkan data muzakki
   public function postDataMuzakki($data)
   {

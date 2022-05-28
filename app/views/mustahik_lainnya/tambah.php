@@ -28,11 +28,11 @@
           <option value="Amilin">Amilin</option>
           <option value="Fisabilillah">Fisabilillah</option>
           <option value="Mualaf">Mualaf</option>
-          <option value="Ibnu Sabil">Ibnu Sabil</option>
+          <option value="Ibnu_Sabil">Ibnu Sabil</option>
         </select>
       </div>
       <div class="mb-3">
-        <label for="hak">Hak (Rp)</label>
+        <label for="hak">Hak (Kg)</label>
         <input required class="form-control" id="hak" name="hak" type="number">
       </div>
 

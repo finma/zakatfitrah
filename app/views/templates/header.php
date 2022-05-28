@@ -70,6 +70,16 @@
           <i class="fas fa-th-large"></i>
           <span>Mustahik Lainnya</span></a>
       </li>
+      <li class="nav-item <?php if ($data['link'] == 'laporanpengumpulanzakat') echo 'active' ?>">
+        <a class="nav-link" href="<?= BASEURL; ?>/laporanpengumpulanzakat">
+          <i class="fas fa-th-large"></i>
+          <span>Laporan Pengumpulan Zakat</span></a>
+      </li>
+      <li class="nav-item <?php if ($data['link'] == 'laporandistribusizakat') echo 'active' ?>">
+        <a class="nav-link" href="<?= BASEURL; ?>/laporandistribusizakat">
+          <i class="fas fa-th-large"></i>
+          <span>Laporan Distribusi Zakat</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

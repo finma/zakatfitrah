@@ -25,6 +25,12 @@ class PengumpulanZakatFitrah_model
     return $this->db->single();
   }
 
+  public function getSumJumlahZakat()
+  {
+    $this->db->query('SELECT SUM(jumlah_tanggungan) AS total_jiwa, SUM(bayar_beras) AS total_beras, SUM(bayar_uang) AS total_uang FROM ' . $this->table);
+    return $this->db->resultSet();
+  }
+
   // * menambahkan data zakat fitrah
   public function postDataZakat($data)
   {

@@ -25,6 +25,14 @@ class MustahikLainnya_model
     return $this->db->single();
   }
 
+  // * mengambil data mustahik warga berdasarkan kategori
+  public function getJumlahKKByKategori($kategori)
+  {
+    $this->db->query('SELECT * FROM ' . $this->table . ' WHERE kategori = :kategori');
+    $this->db->bind('kategori', $kategori);
+    return $this->db->resultSet();
+  }
+
   // * menambahkan data mustahik lainnya
   public function postDataMustahikLainnya($data)
   {
